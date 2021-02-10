@@ -5,11 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using prooram.Infrastructure.Identity;
+using prooram.Infrastructure.Persistence;
+using prooram.Infrastructure.Service;
+using prooram.Infrastructure;
 
-namespace WebUI
+
+namespace prooram.WebUI
 {
     public class Startup
     {
@@ -23,7 +29,11 @@ namespace WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //add configs, mediatr,sql....
+            services.AddInfrastructure(Configuration);
             services.AddControllersWithViews();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,3 +65,6 @@ namespace WebUI
         }
     }
 }
+
+
+// dotnet ef migrations add "initialcreate" --project Infrastructure --startup-project WebUI --output-dir Persistence\Migrations

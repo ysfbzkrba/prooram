@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IEnumerable<CategoryDTO>
+
+<div class="container-fluid">
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <p class="mb-4">
+                <a asp-action="create" class="btn btn-success float-right">Yeni Ekle</a>
+            </p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="d-none">@Html.DisplayNameFor(model => model.Id)</th>
+                            <th>@Html.DisplayNameFor(model => model.CategoryName)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+                                <td class="d-none">@Html.DisplayFor(model => category.Id)</td>
+                                <td>@Html.DisplayFor(model => category.CategoryName)</td>
+                                <td>
+                                    <a asp-action="details" class="btn btn-sm shadow-sm" asp-route-id="@category.Id"><i class="fas fa-search text-info"></i></a>
+                                    <a asp-action="edit" class="btn btn-sm shadow-sm" asp-route-id="@category.Id"><i class="fas fa-pen    text-warning"></i></a>
+                                    <a asp-action="delete" class="btn btn-sm shadow-sm" asp-route-id="@category.Id"><i class="fas fa-trash  text-danger"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section css{
+    <link href="/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+}
+
+@section js {
+
+    <!-- Page level plugins -->
+    <script src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/admin/js/demo/datatables-demo.js"></script>
+} 

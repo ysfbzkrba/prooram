@@ -16,8 +16,6 @@ namespace prooram.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<IDateTime, DateTimeService>();
-            services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
 
             if (configuration.GetValue<bool>("UseInMemoryDatabase"))
             {
@@ -27,6 +25,9 @@ namespace prooram.Infrastructure
             {
                 services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("default"),b=> b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
             }
+
+            services.AddTransient<IDateTime, DateTimeService>();
+            services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
 
 
             //services.AddTransient  => geçici nesneler her zaman farklıdır. her denetleyiciye ve her hizmete yeni bir örnek sağlar

@@ -7,7 +7,7 @@ using prooram.Domain.Common;
 
 namespace prooram.Domain.Entities
 {
-    class Post : AuditableEntity
+    public class Post : AuditableEntity
     {
     }
 }

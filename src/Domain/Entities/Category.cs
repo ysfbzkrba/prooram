@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using prooram.Domain.Common;
+﻿using prooram.Domain.Common;
+
+// using System.ComponentModel.DataAnnotations;
 
 namespace prooram.Domain.Entities
 {
     public class Category : AuditableEntity
     {
+        // [Required]
+        // [StringLength(maximumLength:100)]
         public string CategoryName { get; set; }
 
     }

@@ -16,9 +16,9 @@ namespace prooram.Infrastructure.Persistence
             if (!context.Categories.Any()) // if categories table = empty
             {
                 string[] categories = { "Vacation", "Food", "Movie", "Music", "Information Technologies" };
-                foreach (string category in categories)
+                foreach (string name in categories)
                 {
-                    context.Categories.Add(new Domain.Entities.Category { CategoryName = category });
+                    context.Categories.Add(new Domain.Entities.Category { CategoryName = name });
                 }
                 await context.SaveChangesAsync();
             }

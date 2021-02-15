@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{308A3F4D-4274-4904-819E-0A3E891EEF71}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "src\webui\WebUI.csproj", "{A411DF46-1A06-4CD7-90B0-5B4647E7815B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F277CF1A-87AF-4195-9BC0-E35D53F25B26} = {F277CF1A-87AF-4195-9BC0-E35D53F25B26}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{2C89A49F-84EF-4C18-A0D2-517D8E64F831}"
 EndProject

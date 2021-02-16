@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace prooram.Application.Category.DTO
+namespace prooram.Application.CategoryMediatr.DTO
 {
-    public class EditCategoryDTO
+    public class DetailsCategoryDTO
     {
         public Guid Id { get; set; }
         public string CategoryName { get; set; }
@@ -10,5 +14,6 @@ namespace prooram.Application.Category.DTO
         public string CreatedBy { get; set; }
         public DateTime? Modified { get; set; }
         public string ModifiedBy { get; set; }
+
     }
 }

@@ -8,10 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Folder Include="Category\Commands\" />
-	  <Folder Include="Category\Validators\" />
-	  <Folder Include="Common\Behaviours\" />
-	  <Folder Include="Common\Exceptions\" />
 	  <Folder Include="Common\Mappings\" />
 	  <Folder Include="Common\Models\" />
 	</ItemGroup>

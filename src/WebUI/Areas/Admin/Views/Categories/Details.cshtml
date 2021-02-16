@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+@model DetailsCategoryDTO
+
+<div class="container-fluid">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class=""><b>@Html.DisplayNameFor(model => model.Id)</b></div>
+                    <div>@Model.Id</div>
+                </div>
+            </div>
+            <hr />
+            <div class="row mb-5">
+                <div class="col">
+                    <div class=""><b>@Html.DisplayNameFor(model => model.CategoryName)</b></div>
+                    <div>@Model.CategoryName</div>
+                </div>
+                <hr />
+            </div>
+            <div class="row mb-5">
+                <div class="col">
+                    <div class=""><b>@Html.DisplayNameFor(model => model.Created)</b></div>
+                    <div>@Model.Created</div>
+                </div>
+                <div class="col">
+                    <div class=""><b>@Html.DisplayNameFor(model => model.CreatedBy)</b></div>
+                    <div>@Model.CreatedBy</div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col">
+                    <div class=""><b>@Html.DisplayNameFor(model => model.Modified)</b></div>
+                    <div>@Model.Modified</div>
+                </div>
+                <div class="col">
+                    <div class=""><b>@Html.DisplayNameFor(model => model.ModifiedBy)</b></div>
+                    <div>@Model.ModifiedBy</div>
+                </div>
+            </div>
+            <hr />
+
+        </div>
+    </div>
+
+
+</div>

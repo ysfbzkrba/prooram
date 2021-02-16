@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
-using prooram.Application.Category.DTO;
+using prooram.Application.CategoryMediatr.DTO;
 
-namespace prooram.Application.Category.Queries
+namespace prooram.Application.CategoryMediatr.Queries
 {
     public class GetAllCategoriesQuery : IRequest<IList<CategoryDTO>>
     {

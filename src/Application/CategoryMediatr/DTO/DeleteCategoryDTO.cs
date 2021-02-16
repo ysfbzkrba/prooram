@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace prooram.Application.Category.DTO
+namespace prooram.Application.CategoryMediatr.DTO
 {
     public class DeleteCategoryDTO
     {

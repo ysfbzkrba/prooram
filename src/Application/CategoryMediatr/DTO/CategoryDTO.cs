@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prooram.Application.Category.DTO
+namespace prooram.Application.CategoryMediatr.DTO
 {
     public class CategoryDTO
     {

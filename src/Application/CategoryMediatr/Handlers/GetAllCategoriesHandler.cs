@@ -1,14 +1,14 @@
 ﻿using MediatR;
-using prooram.Application.Category.Queries;
+using prooram.Application.CategoryMediatr.Queries;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using prooram.Application.Category.DTO;
+using prooram.Application.CategoryMediatr.DTO;
 using prooram.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace prooram.Application.Category.Handlers
+namespace prooram.Application.CategoryMediatr.Handlers
 {
     public class GetAllCategoriesHandler : IRequestHandler<GetAllCategoriesQuery, IList<CategoryDTO>>
     {
